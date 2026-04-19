@@ -3,8 +3,8 @@ import { Card, CardContent } from "@/components/ui/card"
 import { facultyData, schoolStats } from "@/lib/data"
 
 export const metadata = {
-  title: "Our School | Zeno School",
-  description: "Learn about Zeno School, our leadership team, and our K12 educational approach.",
+  title: "Our School | Zeno Academy",
+  description: "Learn about Zeno Academy, our leadership team, and our K12 educational approach.",
 }
 
 const values = [
@@ -37,7 +37,7 @@ export default function AboutPage() {
           <p className="eyebrow">Our school</p>
           <h1 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">A K12 community designed around how children actually grow</h1>
           <p className="text-muted-foreground md:text-xl">
-            Zeno School combines strong academics, a caring culture, and thoughtful school systems to help every learner feel confident, capable, and connected.
+            Zeno Academy combines strong academics, a caring culture, and thoughtful school systems to help every learner feel confident, capable, and connected.
           </p>
         </div>
       </div>
@@ -48,7 +48,7 @@ export default function AboutPage() {
             <div>
               <h2 className="mb-4 text-2xl font-bold">Who we are</h2>
               <p className="mb-4 text-muted-foreground">
-                Zeno School was built for families who want more than a polished promise. We focus on what daily school life feels like for children, whether classrooms are calm and purposeful, whether expectations are clear, whether communication is reliable, and whether students are genuinely known by adults who care.
+                Zeno Academy was built for families who want more than a polished promise. We focus on what daily school life feels like for children, whether classrooms are calm and purposeful, whether expectations are clear, whether communication is reliable, and whether students are genuinely known by adults who care.
               </p>
               <p className="text-muted-foreground">
                 Our K12 pathway supports children from early years through middle school with developmentally appropriate teaching, bilingual family support, rich co-curricular opportunities, and systems that make learning visible. We want students to leave school each day feeling stretched, supported, and proud of what they are becoming.
@@ -58,7 +58,7 @@ export default function AboutPage() {
               src="/campus-default.jpg"
               width={700}
               height={460}
-              alt="Students and teachers on the Zeno School campus"
+              alt="Students and teachers on the Zeno Academy campus"
               className="rounded-[32px] object-cover shadow-lg"
             />
           </div>

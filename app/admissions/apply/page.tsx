@@ -60,7 +60,7 @@ export default function ApplyPage() {
             </div>
             <div>
               <p className="font-semibold text-foreground">Need help now?</p>
-              <p>Email <a className="text-primary hover:underline" href="mailto:admissions@zenoschool.edu">admissions@zenoschool.edu</a> or call +86 (755) 8601 2026.</p>
+              <p>Email <a className="text-primary hover:underline" href="mailto:admin@zeno.edu.kg">admin@zeno.edu.kg</a> or call +1 (217) 858-1258.</p>
             </div>
           </CardContent>
         </Card>

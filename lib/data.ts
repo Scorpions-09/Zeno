@@ -13,14 +13,14 @@ export interface NewsItem {
 export const newsData: NewsItem[] = [
   {
     id: "1",
-    title: "Zeno School Launches Future Makers STEAM Week for Grades 1-9",
+    title: "Zeno Academy Launches Future Makers STEAM Week for Grades 1-9",
     summary:
       "Hands-on robotics, coding, science labs, and design challenges are bringing curiosity to life across our K12 campus.",
     content: `
-      <p>Zeno School has launched its new Future Makers STEAM Week, a cross-grade learning experience designed to help students connect classroom knowledge with real-world creativity. Throughout the week, learners from primary and middle school are rotating through robotics labs, coding mini-studios, science experiments, engineering builds, and collaborative art challenges.</p>
+      <p>Zeno Academy has launched its new Future Makers STEAM Week, a cross-grade learning experience designed to help students connect classroom knowledge with real-world creativity. Throughout the week, learners from primary and middle school are rotating through robotics labs, coding mini-studios, science experiments, engineering builds, and collaborative art challenges.</p>
       <p>Each activity has been tailored to age level. Younger students are exploring patterns, simple machines, and storytelling through making, while older students are building prototypes, testing hypotheses, and presenting team solutions to authentic design problems.</p>
       <p>Teachers designed the program to strengthen confidence, communication, and problem-solving alongside academic skills. Families have also been invited to a Friday showcase where students will share projects, reflect on what they learned, and demonstrate how inquiry-based learning supports long-term growth.</p>
-      <p>The initiative is part of Zeno School's wider commitment to joyful, future-ready education, where children are encouraged to ask better questions, take thoughtful risks, and learn by doing.</p>
+      <p>The initiative is part of Zeno Academy's wider commitment to joyful, future-ready education, where children are encouraged to ask better questions, take thoughtful risks, and learn by doing.</p>
     `,
     image: "/news-default11.svg?height=400&width=600",
     date: "2026-04-08",
@@ -33,9 +33,9 @@ export const newsData: NewsItem[] = [
     summary:
       "Prospective families explored classrooms, met teachers, and experienced how the school blends academic rigor with wellbeing.",
     content: `
-      <p>Zeno School welcomed dozens of families to its spring Open Day, giving parents and children the chance to experience the campus community firsthand. Visitors toured early years classrooms, primary learning hubs, specialist rooms, and student activity spaces while speaking directly with school leaders and homeroom teachers.</p>
+      <p>Zeno Academy welcomed dozens of families to its spring Open Day, giving parents and children the chance to experience the campus community firsthand. Visitors toured early years classrooms, primary learning hubs, specialist rooms, and student activity spaces while speaking directly with school leaders and homeroom teachers.</p>
       <p>During the event, the school shared its K12 learning pathway, student support model, and approach to bilingual communication. Families were particularly interested in the balance between strong academics, social-emotional learning, and a structured yet warm daily routine.</p>
-      <p>Interactive demo lessons helped children feel part of the experience. From phonics games and guided reading to science discovery tables and visual arts stations, the day gave a practical sense of what learning looks and feels like at Zeno School.</p>
+      <p>Interactive demo lessons helped children feel part of the experience. From phonics games and guided reading to science discovery tables and visual arts stations, the day gave a practical sense of what learning looks and feels like at Zeno Academy.</p>
       <p>The admissions team noted that families consistently asked about safety, teacher partnership, and student happiness, three areas the school continues to prioritize in both campus planning and daily school life.</p>
     `,
     image: "/news-default22.svg?height=400&width=600",
@@ -49,10 +49,10 @@ export const newsData: NewsItem[] = [
     summary:
       "The new wellbeing framework supports emotional growth, healthy routines, and strong home-school partnership from kindergarten through middle school.",
     content: `
-      <p>Zeno School has expanded its student wellbeing program to provide more consistent support across all grade levels. The updated framework includes weekly advisory sessions, age-appropriate social-emotional learning, regular counselor check-ins, and a stronger referral system for students who need additional care.</p>
+      <p>Zeno Academy has expanded its student wellbeing program to provide more consistent support across all grade levels. The updated framework includes weekly advisory sessions, age-appropriate social-emotional learning, regular counselor check-ins, and a stronger referral system for students who need additional care.</p>
       <p>Teachers are also receiving additional training in classroom belonging, restorative conversations, and developmental support. The goal is to ensure that every child feels known, safe, and ready to learn.</p>
       <p>For families, the school has introduced a new series of parent workshops on topics such as digital balance, emotional regulation, positive routines, and supporting children during academic transitions.</p>
-      <p>By investing in wellbeing alongside academics, Zeno School aims to help students grow not only as learners, but also as kind, confident, and resilient young people.</p>
+      <p>By investing in wellbeing alongside academics, Zeno Academy aims to help students grow not only as learners, but also as kind, confident, and resilient young people.</p>
     `,
     image: "/news-default33.svg?height=400&width=600",
     date: "2026-03-10",

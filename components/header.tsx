@@ -18,10 +18,10 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80">
       <div className="container flex h-20 items-center justify-between gap-4">
         <Link href="/" className="flex items-center gap-3 min-w-0">
-          <Image src="/logo-default.svg" alt="Zeno School Logo" width={40} height={40} className="h-10 w-10" />
+          <Image src="/logo-default.svg" alt="Zeno Academy Logo" width={40} height={40} className="h-10 w-10" />
           <div className="min-w-0">
-            <p className="truncate text-lg font-bold leading-tight">Zeno School</p>
-            <p className="truncate text-xs text-muted-foreground">Inspiring curious minds from early years to middle school</p>
+            <p className="truncate text-lg font-bold leading-tight">Zeno Academy</p>
+            <p className="truncate text-xs text-muted-foreground">Зено академиясы</p>
           </div>
         </Link>
 

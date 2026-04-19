@@ -10,8 +10,8 @@ import { LanguageProvider } from "@/lib/language-context"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Zeno School | K12 Education Website",
-  description: "Official website of Zeno School, a K12 learning community focused on academic growth, wellbeing, and future-ready learning.",
+  title: "Zeno Academy | Зено академиясы",
+  description: "Official website of Zeno Academy, a K12 learning community focused on academic growth, wellbeing, and future-ready learning.",
   generator: "v0.dev",
 }
 
@@ -29,7 +29,7 @@ export default function RootLayout({
               <div className="bg-slate-950 text-slate-100">
                 <div className="container flex flex-col gap-2 py-2 text-xs sm:flex-row sm:items-center sm:justify-between">
                   <div className="flex flex-wrap items-center gap-4 text-slate-300">
-                    <a href="mailto:admissions@zenoschool.edu" className="hover:text-white">admissions@zenoschool.edu</a>
+                    <a href="mailto:admin@zeno.edu.kg" className="hover:text-white">admin@zeno.edu.kg</a>
                     <span>Mon-Fri, 8:00 AM to 5:30 PM</span>
                   </div>
                   <div className="flex flex-wrap items-center gap-4 text-slate-300">

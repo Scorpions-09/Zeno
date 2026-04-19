@@ -16,13 +16,13 @@ export function generateMetadata({ params }: NewsPageProps) {
 
   if (!news) {
     return {
-      title: "Story Not Found | Zeno School",
+      title: "Story Not Found | Zeno Academy",
       description: "The requested school story could not be found.",
     }
   }
 
   return {
-    title: `${news.title} | Zeno School`,
+    title: `${news.title} | Zeno Academy`,
     description: news.summary,
   }
 }

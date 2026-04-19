@@ -60,7 +60,7 @@ export const translations: Translations = {
     hero: {
       title: 'A joyful K12 school where children grow with confidence',
       subtitle: 'Learning with purpose, care, and curiosity every day',
-      description: 'Zeno School blends strong academics, student wellbeing, bilingual communication, and vibrant co-curricular life to help every learner thrive from early years through middle school.',
+      description: 'Zeno Academy blends strong academics, student wellbeing, bilingual communication, and vibrant co-curricular life to help every learner thrive from early years through middle school.',
       applyNow: 'Book a Tour',
       learnMore: 'Explore Our School'
     },
@@ -91,7 +91,7 @@ export const translations: Translations = {
     },
     cta: {
       title: 'Come see the school in action',
-      description: 'Meet our team, visit classrooms, and discover whether Zeno School is the right fit for your child and family.'
+      description: 'Meet our team, visit classrooms, and discover whether Zeno Academy is the right fit for your child and family.'
     }
   },
   zh: {
@@ -105,7 +105,7 @@ export const translations: Translations = {
     hero: {
       title: '一所让孩子自信成长的 K12 学校',
       subtitle: '以关怀、探究与目标感陪伴每一天学习',
-      description: 'Zeno School 融合扎实学术、学生关怀、双语沟通与丰富课程活动，帮助孩子从幼小阶段到初中阶段持续成长。',
+      description: 'Zeno Academy 融合扎实学术、学生关怀、双语沟通与丰富课程活动，帮助孩子从幼小阶段到初中阶段持续成长。',
       applyNow: '预约访校',
       learnMore: '了解学校'
     },
@@ -136,7 +136,7 @@ export const translations: Translations = {
     },
     cta: {
       title: '欢迎来校园看看',
-      description: '与老师交流，走进课堂，亲自感受 Zeno School 是否适合您的孩子与家庭。'
+      description: '与老师交流，走进课堂，亲自感受 Zeno Academy 是否适合您的孩子与家庭。'
     }
   }
 }

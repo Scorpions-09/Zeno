@@ -1,6 +1,6 @@
 export const metadata = {
-  title: "Learning Commons | Zeno School",
-  description: "Explore reading, research, and student learning resources at Zeno School.",
+  title: "Learning Commons | Zeno Academy",
+  description: "Explore reading, research, and student learning resources at Zeno Academy.",
 }
 
 export default function LibraryPage() {
@@ -57,7 +57,7 @@ export default function LibraryPage() {
         <section>
           <h2 className="mb-3 text-2xl font-bold">Need help?</h2>
           <p className="text-muted-foreground">
-            Families and students can contact the Learning Commons team at <a href="mailto:library@zenoschool.edu" className="text-primary hover:underline">library@zenoschool.edu</a> for borrowing support, reading recommendations, or research help.
+            Families and students can contact the Learning Commons team at <a href="mailto:library@zeno.edu.kg" className="text-primary hover:underline">library@zeno.edu.kg</a> for borrowing support, reading recommendations, or research help.
           </p>
         </section>
       </div>

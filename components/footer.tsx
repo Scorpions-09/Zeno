@@ -6,7 +6,7 @@ export function Footer() {
       <div className="container py-12">
         <div className="grid grid-cols-1 gap-10 md:grid-cols-4">
           <div className="space-y-3">
-            <h3 className="text-lg font-bold">Zeno School</h3>
+            <h3 className="text-lg font-bold">Zeno Academy</h3>
             <p className="text-sm text-slate-300">A caring K12 learning community for curious, confident, and kind young people.</p>
           </div>
 
@@ -32,15 +32,15 @@ export function Footer() {
 
           <div className="space-y-3 text-sm text-slate-300">
             <h3 className="text-sm font-bold uppercase tracking-[0.2em] text-slate-400">Contact</h3>
-            <p>88 Harmony Road, Education Park</p>
-            <p>Shenzhen, Guangdong 518000</p>
-            <p className="pt-2">Email: admissions@zenoschool.edu</p>
-            <p>Phone: +86 (755) 8601 2026</p>
+            <p>12 Ala-Too Street, Building 3, Room 45</p>
+            <p>Ananyevo, Issyk-Kul Region 722101, Kyrgyzstan</p>
+            <p className="pt-2">Email: admin@zeno.edu.kg</p>
+            <p>Phone: +1 (217) 858-1258</p>
           </div>
         </div>
 
         <div className="mt-10 border-t border-slate-800 pt-6 text-center text-sm text-slate-400">
-          © {new Date().getFullYear()} Zeno School. All rights reserved.
+          © {new Date().getFullYear()} Zeno Academy. All rights reserved.
         </div>
       </div>
     </footer>

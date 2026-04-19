@@ -5,8 +5,8 @@ import { Button } from "@/components/ui/button"
 import { newsData } from "@/lib/data"
 
 export const metadata = {
-  title: "School Stories | Zeno School",
-  description: "Latest school stories, family updates, and student life highlights from Zeno School.",
+  title: "School Stories | Zeno Academy",
+  description: "Latest school stories, family updates, and student life highlights from Zeno Academy.",
 }
 
 export default function NewsPage() {

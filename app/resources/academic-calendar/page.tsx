@@ -1,6 +1,6 @@
 export const metadata = {
-  title: "School Calendar | Zeno School",
-  description: "Key dates, family events, and term planning information for Zeno School.",
+  title: "School Calendar | Zeno Academy",
+  description: "Key dates, family events, and term planning information for Zeno Academy.",
 }
 
 const termOne = [

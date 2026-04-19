@@ -21,7 +21,7 @@ export default function StudentPortalPage() {
 
   const handleForgotPassword = () => {
     setError(null)
-    setMessage('Please contact portal support at portal@zenoschool.edu for account assistance.')
+    setMessage('Please contact portal support at admin@zeno.edu.kg for account assistance.')
   }
 
   return (

@@ -5,8 +5,8 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { admissionRequirements } from "@/lib/data"
 
 export const metadata = {
-  title: "Admissions | Zeno School",
-  description: "Admissions information for Zeno School, including tours, assessments, and application requirements.",
+  title: "Admissions | Zeno Academy",
+  description: "Admissions information for Zeno Academy, including tours, assessments, and application requirements.",
 }
 
 const processSteps = [
@@ -193,13 +193,13 @@ export default function AdmissionsPage() {
         <section className="section-shell overflow-hidden bg-primary p-8 text-center text-primary-foreground">
           <h2 className="mb-4 text-2xl font-bold">Ready to take the next step?</h2>
           <p className="mx-auto mb-6 max-w-2xl">
-            Book a visit, ask questions, and let us help you decide whether Zeno School is the right place for your child to learn and grow.
+            Book a visit, ask questions, and let us help you decide whether Zeno Academy is the right place for your child to learn and grow.
           </p>
           <div className="flex flex-col justify-center gap-4 sm:flex-row">
             <Link href="/admissions/apply">
               <Button size="lg" variant="secondary" className="rounded-full">Book a Tour</Button>
             </Link>
-            <a href="mailto:admissions@zenoschool.edu">
+            <a href="mailto:admin@zeno.edu.kg">
               <Button size="lg" variant="outline" className="rounded-full border-white/30 bg-transparent text-white hover:bg-white/10 hover:text-white">
                 Contact Admissions
               </Button>
