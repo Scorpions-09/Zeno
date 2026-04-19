@@ -5,274 +5,148 @@ import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
-import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
 import { Textarea } from '@/components/ui/textarea'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
-import { admissionRequirements } from '@/lib/data'
 
 export default function ApplyPage() {
   const [submitted, setSubmitted] = useState(false)
-  const [programType, setProgramType] = useState('undergraduate')
+  const [gradeDivision, setGradeDivision] = useState('early-years')
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault()
-    // Here you would typically handle form submission, e.g., send data to a server
-    console.log('Form submitted for program type:', programType)
     setSubmitted(true)
   }
 
   if (submitted) {
     return (
-      <div className="container py-12 md:py-16 lg:py-24 flex flex-col items-center justify-center text-center">
-        <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-4">Application Submitted!</h1>
+      <div className="container flex flex-col items-center justify-center py-12 text-center md:py-16 lg:py-24">
+        <h1 className="mb-4 text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">Thanks, your tour request has been received</h1>
         <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
-          Thank you for applying to Zeno Academy. Your application has been successfully submitted. Please wait for an email response.
+          Our admissions team will contact you shortly to confirm availability, answer questions, and guide you through the next steps.
         </p>
       </div>
     )
   }
 
-  const renderFormFields = (requirements: string[]) => {
-    return requirements.map((req, index) => {
-      // Basic input field generation based on requirement text
-      // This can be greatly improved with more specific field types and validation
-      const fieldId = `field-${programType}-${index}`
-      let fieldType = 'text'
-      let placeholder = req
-      let label = req
-
-      if (req.toLowerCase().includes('email')) {
-        fieldType = 'email'
-        placeholder = 'Enter your email'
-      } else if (req.toLowerCase().includes('phone')) {
-        fieldType = 'tel'
-        placeholder = 'Enter your phone number'
-      } else if (req.toLowerCase().includes('date') || req.toLowerCase().includes('dob')) {
-        fieldType = 'date'
-        placeholder = ''
-        label = `${label} (MM/DD/YYYY)`
-      } else if (req.toLowerCase().includes('gpa')) {
-        fieldType = 'number'
-        placeholder = 'Enter your GPA'
-      } else if (req.toLowerCase().includes('statement') || req.toLowerCase().includes('essay')) {
-        return (
-          <div key={fieldId} className="space-y-2">
-            <Label htmlFor={fieldId}>{label}</Label>
-            <Textarea id={fieldId} placeholder={`Write your ${label.toLowerCase()}`} required
-              onInvalid={(e) => {
-                const target = e.target as HTMLTextAreaElement;
-                if (target.validity.valueMissing) {
-                  target.setCustomValidity('Please fill out this field.');
-                } else {
-                  target.setCustomValidity('');
-                }
-              }}
-              onInput={(e) => {
-                const target = e.target as HTMLTextAreaElement;
-                target.setCustomValidity('');
-              }}
-            />
-          </div>
-        )
-      } else if (req.toLowerCase().includes('recommendation')) {
-        label = `${req} (e.g., recommender's name and email)`
-        placeholder = `Recommender's Name, Recommender's Email`
-      } else if (req.toLowerCase().includes('resume') || req.toLowerCase().includes('cv')) {
-        fieldType = 'file'
-        label = `${req} (PDF, DOCX)`
-      } else if (req.toLowerCase().includes('passport')){
-        fieldType = 'file'
-        label = `${req} (PDF, JPG, PNG)`
-      } else if (req.toLowerCase().includes('financial documentation')){
-        fieldType = 'file'
-        label = `${req} (PDF)`
-      }
-
-      if (fieldType === 'file') {
-        return (
-          <div key={fieldId} className="space-y-2">
-            <Label htmlFor={fieldId}>{label}</Label>
-            <Input id={fieldId} type={fieldType} required
-              onInvalid={(e) => {
-                const target = e.target as HTMLInputElement;
-                if (target.validity.valueMissing) {
-                  target.setCustomValidity('Please select a file.');
-                } else {
-                  target.setCustomValidity('');
-                }
-              }}
-              onInput={(e) => {
-                const target = e.target as HTMLInputElement;
-                target.setCustomValidity('');
-              }}
-            />
-          </div>
-        )
-      }
-
-      return (
-        <div key={fieldId} className="space-y-2">
-          <Label htmlFor={fieldId}>{label}</Label>
-          <Input id={fieldId} type={fieldType} placeholder={placeholder} required
-            onInvalid={(e) => {
-              const target = e.target as HTMLInputElement;
-              if (target.validity.valueMissing) {
-                target.setCustomValidity('Please fill out this field.');
-              } else if (target.type === 'email' && target.validity.typeMismatch) {
-                target.setCustomValidity(`Please include an "@" in the email address. '${target.value}' is missing an "@".`);
-              } else {
-                target.setCustomValidity('');
-              }
-            }}
-            onInput={(e) => {
-              const target = e.target as HTMLInputElement;
-              target.setCustomValidity('');
-            }}
-          />
-        </div>
-      )
-    })
-  }
-
   return (
     <div className="container py-12 md:py-16 lg:py-24">
-      <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
-        <div className="space-y-2">
-          <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Apply to Zeno Academy</h1>
-          <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
-            Complete the form below to start your application process.
+      <div className="mb-12 flex flex-col items-center justify-center space-y-4 text-center">
+        <div className="max-w-3xl space-y-3">
+          <p className="eyebrow">Book a visit</p>
+          <h1 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">Start with a conversation, not just a form</h1>
+          <p className="text-muted-foreground md:text-xl">
+            Tell us a little about your child and your family. We will help you arrange a campus tour, classroom visit, or admissions consultation that fits your grade level.
           </p>
         </div>
       </div>
 
-      <Tabs defaultValue="undergraduate" className="w-full max-w-3xl mx-auto" onValueChange={setProgramType}>
-        <TabsList className="grid w-full grid-cols-3 mb-6">
-          <TabsTrigger value="undergraduate">Undergraduate</TabsTrigger>
-          <TabsTrigger value="graduate">Graduate</TabsTrigger>
-          <TabsTrigger value="international">International</TabsTrigger>
-        </TabsList>
+      <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-[0.9fr_1.1fr]">
+        <Card className="section-shell rounded-[32px] shadow-none">
+          <CardHeader>
+            <CardTitle>What happens next</CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-5 text-sm text-muted-foreground">
+            <div>
+              <p className="font-semibold text-foreground">1. Review by admissions</p>
+              <p>We check your preferred grade level, timeline, and any key student needs.</p>
+            </div>
+            <div>
+              <p className="font-semibold text-foreground">2. Tour or consultation booking</p>
+              <p>We suggest a suitable time for a campus visit, virtual meeting, or assessment step.</p>
+            </div>
+            <div>
+              <p className="font-semibold text-foreground">3. Application guidance</p>
+              <p>You receive a clear list of required documents and division-specific next steps.</p>
+            </div>
+            <div>
+              <p className="font-semibold text-foreground">Need help now?</p>
+              <p>Email <a className="text-primary hover:underline" href="mailto:admissions@zenoschool.edu">admissions@zenoschool.edu</a> or call +86 (755) 8601 2026.</p>
+            </div>
+          </CardContent>
+        </Card>
 
-        {admissionRequirements.map((program) => (
-          <TabsContent key={program.program} value={program.program.toLowerCase().split(' ')[0]}>
-            <Card>
-              <CardHeader>
-                <CardTitle>{program.program} Application</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="space-y-2">
-                    <Label htmlFor={`fullName-${program.program.toLowerCase().split(' ')[0]}`}>Full Name</Label>
-                    <Input id={`fullName-${program.program.toLowerCase().split(' ')[0]}`} placeholder="Enter your full name" required
-                      onInvalid={(e) => {
-                        const target = e.target as HTMLInputElement;
-                        if (target.validity.valueMissing) {
-                          target.setCustomValidity('Please fill out this field.');
-                        } else {
-                          target.setCustomValidity('');
-                        }
-                      }}
-                      onInput={(e) => {
-                        const target = e.target as HTMLInputElement;
-                        target.setCustomValidity('');
-                      }}
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor={`email-${program.program.toLowerCase().split(' ')[0]}`}>Email Address</Label>
-                    <Input id={`email-${program.program.toLowerCase().split(' ')[0]}`} type="email" placeholder="Enter your email address" required
-                      onInvalid={(e) => {
-                        const target = e.target as HTMLInputElement;
-                        if (target.validity.valueMissing) {
-                          target.setCustomValidity('Please fill out this field.');
-                        } else if (target.validity.typeMismatch) {
-                          target.setCustomValidity(`Please include an "@" in the email address. '${target.value}' is missing an "@".`);
-                        } else {
-                          target.setCustomValidity('');
-                        }
-                      }}
-                      onInput={(e) => {
-                        const target = e.target as HTMLInputElement;
-                        target.setCustomValidity('');
-                      }}
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor={`phone-${program.program.toLowerCase().split(' ')[0]}`}>Phone Number</Label>
-                    <Input id={`phone-${program.program.toLowerCase().split(' ')[0]}`} type="tel" placeholder="Enter your phone number" />
-                  </div>
-                  <div className="space-y-2">
-  <Label htmlFor={`dob-${program.program.toLowerCase().split(' ')[0]}`}>
-    Date of Birth (MM/DD/YYYY)
-  </Label>
-  <Input
-    id={`dob-${program.program.toLowerCase().split(' ')[0]}`}
-    type="text"
-    required
-    placeholder="MM/DD/YYYY"
-    pattern="^(0[1-9]|1[0-2])/(0[1-9]|[12][0-9]|3[01])/\d{4}$"
-    onInvalid={(e) => {
-      const target = e.target as HTMLInputElement;
-      if (target.validity.valueMissing) {
-        target.setCustomValidity('Please fill out this field.');
-      } else if (target.validity.patternMismatch) {
-        target.setCustomValidity('Please enter a valid date in MM/DD/YYYY format.');
-      } else {
-        target.setCustomValidity('');
-      }
-    }}
-    onInput={(e) => {
-      const target = e.target as HTMLInputElement;
-      target.setCustomValidity('');
-    }}
-  />
-</div>
+        <Card className="rounded-[32px] border-white/70 bg-white/92 shadow-none">
+          <CardHeader>
+            <CardTitle>Family inquiry form</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div className="grid gap-6 md:grid-cols-2">
+                <div className="space-y-2">
+                  <Label htmlFor="parentName">Parent or guardian name</Label>
+                  <Input id="parentName" placeholder="Enter full name" required className="rounded-2xl" />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="studentName">Student name</Label>
+                  <Input id="studentName" placeholder="Enter student name" required className="rounded-2xl" />
+                </div>
+              </div>
 
-                  <div className="space-y-2">
-                    <Label>Gender</Label>
-                    <RadioGroup defaultValue="other" className="flex space-x-4">
-                      <div className="flex items-center space-x-2">
-                        <RadioGroupItem value="male" id={`male-${program.program.toLowerCase().split(' ')[0]}`} />
-                        <Label htmlFor={`male-${program.program.toLowerCase().split(' ')[0]}`}>Male</Label>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <RadioGroupItem value="female" id={`female-${program.program.toLowerCase().split(' ')[0]}`} />
-                        <Label htmlFor={`female-${program.program.toLowerCase().split(' ')[0]}`}>Female</Label>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <RadioGroupItem value="other" id={`other-${program.program.toLowerCase().split(' ')[0]}`} />
-                        <Label htmlFor={`other-${program.program.toLowerCase().split(' ')[0]}`}>Other</Label>
-                      </div>
-                    </RadioGroup>
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor={`address-${program.program.toLowerCase().split(' ')[0]}`}>Address</Label>
-                    <Textarea id={`address-${program.program.toLowerCase().split(' ')[0]}`} placeholder="Enter your full address" required
-                      onInvalid={(e) => {
-                        const target = e.target as HTMLTextAreaElement;
-                        if (target.validity.valueMissing) {
-                          target.setCustomValidity('Please fill out this field.');
-                        } else {
-                          target.setCustomValidity('');
-                        }
-                      }}
-                      onInput={(e) => {
-                        const target = e.target as HTMLTextAreaElement;
-                        target.setCustomValidity('');
-                      }}
-                    />
-                  </div>
-                  
-                  {/* Dynamically generated fields based on requirements */}
-                  {renderFormFields(program.requirements)}
+              <div className="grid gap-6 md:grid-cols-2">
+                <div className="space-y-2">
+                  <Label htmlFor="email">Email address</Label>
+                  <Input id="email" type="email" placeholder="family@example.com" required className="rounded-2xl" />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="phone">Phone number</Label>
+                  <Input id="phone" type="tel" placeholder="Enter contact number" required className="rounded-2xl" />
+                </div>
+              </div>
 
-                  <Button type="submit" className="w-full">Submit Application</Button>
-                </form>
-              </CardContent>
-            </Card>
-          </TabsContent>
-        ))}
-      </Tabs>
+              <div className="grid gap-6 md:grid-cols-2">
+                <div className="space-y-2">
+                  <Label>Applying for division</Label>
+                  <Select value={gradeDivision} onValueChange={setGradeDivision}>
+                    <SelectTrigger className="rounded-2xl">
+                      <SelectValue placeholder="Select division" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="early-years">Early Years</SelectItem>
+                      <SelectItem value="primary-school">Primary School</SelectItem>
+                      <SelectItem value="middle-school">Middle School</SelectItem>
+                    </SelectContent>
+                  </Select>
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="entryDate">Preferred entry date</Label>
+                  <Input id="entryDate" type="month" required className="rounded-2xl" />
+                </div>
+              </div>
+
+              <div className="grid gap-6 md:grid-cols-2">
+                <div className="space-y-2">
+                  <Label htmlFor="currentSchool">Current school</Label>
+                  <Input id="currentSchool" placeholder="Enter current school or nursery" className="rounded-2xl" />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="language">Home language(s)</Label>
+                  <Input id="language" placeholder="e.g. Chinese, English" className="rounded-2xl" />
+                </div>
+              </div>
+
+              <div className="space-y-2">
+                <Label htmlFor="needs">Anything we should know about your child?</Label>
+                <Textarea
+                  id="needs"
+                  placeholder="Share interests, learning needs, support considerations, or what you are hoping to find in a school."
+                  className="min-h-32 rounded-3xl"
+                />
+              </div>
+
+              <div className="space-y-2">
+                <Label htmlFor="questions">Questions for our admissions team</Label>
+                <Textarea
+                  id="questions"
+                  placeholder="Ask about curriculum, language support, class size, wellbeing, transport, school day, or anything else."
+                  className="min-h-28 rounded-3xl"
+                />
+              </div>
+
+              <Button type="submit" className="w-full rounded-full">Submit inquiry</Button>
+            </form>
+          </CardContent>
+        </Card>
+      </div>
     </div>
   )
 }

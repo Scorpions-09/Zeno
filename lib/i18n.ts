@@ -52,91 +52,91 @@ export const translations: Translations = {
   en: {
     nav: {
       home: 'Home',
-      news: 'News',
+      news: 'Stories',
       admissions: 'Admissions',
-      about: 'About Us',
-      applyNow: 'Apply Now'
+      about: 'Our School',
+      applyNow: 'Book a Tour'
     },
     hero: {
-      title: 'Welcome to Zeno Academy',
-      subtitle: 'Зено академиясы',
-      description: 'Empowering minds through education and innovation. We are dedicated to fostering intellectual growth, critical thinking, and a commitment to excellence in all our academic pursuits.',
-      applyNow: 'Apply Now',
-      learnMore: 'Learn More'
+      title: 'A joyful K12 school where children grow with confidence',
+      subtitle: 'Learning with purpose, care, and curiosity every day',
+      description: 'Zeno School blends strong academics, student wellbeing, bilingual communication, and vibrant co-curricular life to help every learner thrive from early years through middle school.',
+      applyNow: 'Book a Tour',
+      learnMore: 'Explore Our School'
     },
     mission: {
-      title: 'Our Mission',
-      description: 'At Zeno Academy, we are committed to providing a transformative educational experience that prepares students to be leaders, innovators, and responsible global citizens.'
+      title: 'What we believe',
+      description: 'Children do their best when they feel safe, known, challenged, and inspired. Our school is designed to nurture character, literacy, numeracy, creativity, and a lifelong love of learning.'
     },
     values: {
       title: 'Our Core Values',
       excellence: {
-        title: 'Excellence',
-        description: 'We strive for excellence in all our endeavors, from academic programs to research initiatives and community service.'
+        title: 'Whole-Child Growth',
+        description: 'We care about academic progress, emotional wellbeing, character, and confidence, not just test scores.'
       },
       integrity: {
-        title: 'Integrity',
-        description: 'We uphold the highest standards of honesty, transparency, and ethical conduct in all our interactions.'
+        title: 'Warm Structure',
+        description: 'Clear routines, high expectations, and caring relationships help children feel secure and ready to learn.'
       },
       innovation: {
-        title: 'Innovation',
-        description: 'We foster a culture of creativity, critical thinking, and innovation to address the challenges of our time.'
+        title: 'Future-Ready Learning',
+        description: 'Through inquiry, STEAM, language, arts, and collaboration, students build the habits they need for a changing world.'
       }
     },
     news: {
-      title: 'Latest News',
-      description: 'Stay updated with the latest happenings, events, and announcements from Zeno Academy.',
-      readMore: 'Read More',
-      viewAll: 'View All News'
+      title: 'School Stories',
+      description: 'See how learning comes to life through classroom moments, family events, wellbeing programs, and student achievements.',
+      readMore: 'Read Story',
+      viewAll: 'View All Stories'
     },
     cta: {
-      title: 'Begin Your Journey',
-      description: 'Take the first step towards a transformative educational experience at Zeno Academy.'
+      title: 'Come see the school in action',
+      description: 'Meet our team, visit classrooms, and discover whether Zeno School is the right fit for your child and family.'
     }
   },
   zh: {
     nav: {
       home: '首页',
-      news: '新闻',
-      admissions: '招生',
-      about: '关于我们',
-      applyNow: '立即申请'
+      news: '校园动态',
+      admissions: '招生入学',
+      about: '学校介绍',
+      applyNow: '预约访校'
     },
     hero: {
-      title: '欢迎来到泽诺学院',
-      subtitle: 'Зено академиясы',
-      description: '通过教育和创新赋能思维。我们致力于在所有学术追求中培养智力成长、批判性思维和追求卓越的精神。',
-      applyNow: '立即申请',
-      learnMore: '了解更多'
+      title: '一所让孩子自信成长的 K12 学校',
+      subtitle: '以关怀、探究与目标感陪伴每一天学习',
+      description: 'Zeno School 融合扎实学术、学生关怀、双语沟通与丰富课程活动，帮助孩子从幼小阶段到初中阶段持续成长。',
+      applyNow: '预约访校',
+      learnMore: '了解学校'
     },
     mission: {
-      title: '我们的使命',
-      description: '在泽诺学院，我们致力于提供变革性的教育体验，培养学生成为领导者、创新者和负责任的全球公民。'
+      title: '我们的教育主张',
+      description: '当孩子感到安全、被看见、被鼓励、也被适度挑战时，他们才能发挥最好状态。我们关注品格、学术、创造力与终身学习能力的共同发展。'
     },
     values: {
-      title: '核心价值观',
+      title: '核心价值',
       excellence: {
-        title: '卓越',
-        description: '我们在所有工作中追求卓越，从学术项目到研究计划和社区服务。'
+        title: '全人发展',
+        description: '我们重视学业进步，也同样重视情绪健康、品格养成与自信建立。'
       },
       integrity: {
-        title: '诚信',
-        description: '我们在所有互动中坚持最高标准的诚实、透明和道德行为。'
+        title: '温暖而有边界',
+        description: '清晰规则、稳定秩序和真诚关系，让孩子更安心，也更能投入学习。'
       },
       innovation: {
-        title: '创新',
-        description: '我们培养创造力、批判性思维和创新文化，以应对时代的挑战。'
+        title: '面向未来的学习',
+        description: '通过探究式学习、STEAM、语言、艺术与协作，培养孩子适应未来世界的能力。'
       }
     },
     news: {
-      title: '最新消息',
-      description: '及时了解泽诺学院的最新动态、活动和公告。',
-      readMore: '阅读更多',
-      viewAll: '查看所有新闻'
+      title: '校园故事',
+      description: '从课堂瞬间、家校活动到学生成长与项目学习，了解校园每天真实发生的精彩。',
+      readMore: '阅读全文',
+      viewAll: '查看全部动态'
     },
     cta: {
-      title: '开启您的旅程',
-      description: '迈出在泽诺学院获得变革性教育体验的第一步。'
+      title: '欢迎来校园看看',
+      description: '与老师交流，走进课堂，亲自感受 Zeno School 是否适合您的孩子与家庭。'
     }
   }
 }

@@ -16,13 +16,13 @@ export function generateMetadata({ params }: NewsPageProps) {
 
   if (!news) {
     return {
-      title: "News Not Found | Zeno Academy",
-      description: "The requested news article could not be found.",
+      title: "Story Not Found | Zeno School",
+      description: "The requested school story could not be found.",
     }
   }
 
   return {
-    title: `${news.title} | Zeno Academy`,
+    title: `${news.title} | Zeno School`,
     description: news.summary,
   }
 }
@@ -39,14 +39,15 @@ export default function NewsDetailPage({ params }: NewsPageProps) {
       <Link href="/news">
         <Button variant="ghost" className="mb-6 pl-0">
           <ArrowLeft className="mr-2 h-4 w-4" />
-          Back to News
+          Back to School Stories
         </Button>
       </Link>
 
-      <div className="max-w-3xl mx-auto">
-        <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-4">{news.title}</h1>
-        <p className="text-muted-foreground mb-6">
-          {new Date(news.date).toLocaleDateString()} | By {news.author}
+      <div className="mx-auto max-w-3xl">
+        <p className="mb-3 text-sm font-medium text-primary">{news.category}</p>
+        <h1 className="mb-4 text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">{news.title}</h1>
+        <p className="mb-6 text-muted-foreground">
+          {new Date(news.date).toLocaleDateString()} • {news.author}
         </p>
 
         <Image
@@ -54,30 +55,19 @@ export default function NewsDetailPage({ params }: NewsPageProps) {
           width={800}
           height={400}
           alt={news.title}
-          className="rounded-lg object-cover w-full aspect-video mb-8"
+          className="mb-8 aspect-video w-full rounded-[28px] object-cover"
         />
 
-        <div
-          className="prose prose-stone dark:prose-invert max-w-none"
-          dangerouslySetInnerHTML={{ __html: news.content }}
-        />
+        <div className="prose prose-stone max-w-none dark:prose-invert" dangerouslySetInnerHTML={{ __html: news.content }} />
 
-        <div className="mt-12 pt-6 border-t">
-          <h2 className="text-xl font-bold mb-4">Share this article</h2>
-          <div className="flex space-x-4">
-            <Button variant="outline" size="sm">
-              Facebook
-            </Button>
-            <Button variant="outline" size="sm">
-              Twitter
-            </Button>
-            <Button variant="outline" size="sm">
-              LinkedIn
-            </Button>
-            <Button variant="outline" size="sm">
-              Email
-            </Button>
-          </div>
+        <div className="mt-12 rounded-3xl border bg-slate-50 p-6">
+          <h2 className="mb-2 text-xl font-bold">Want to learn more about the school?</h2>
+          <p className="mb-4 text-muted-foreground">
+            Our admissions team can help you explore programs, age groups, and the best next step for your family.
+          </p>
+          <Link href="/admissions/apply">
+            <Button>Book a Tour</Button>
+          </Link>
         </div>
       </div>
     </div>

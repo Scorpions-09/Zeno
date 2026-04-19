@@ -2,78 +2,45 @@ import Link from "next/link"
 
 export function Footer() {
   return (
-    <footer className="w-full border-t bg-background">
-      <div className="container py-10">
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
+    <footer className="w-full border-t bg-slate-950 text-slate-100">
+      <div className="container py-12">
+        <div className="grid grid-cols-1 gap-10 md:grid-cols-4">
           <div className="space-y-3">
-            <h3 className="text-lg font-bold">Zeno Academy</h3>
-            <p className="text-sm text-muted-foreground">Зено академиясы</p>
-            <p className="text-sm text-muted-foreground">Empowering minds through education and innovation.</p>
+            <h3 className="text-lg font-bold">Zeno School</h3>
+            <p className="text-sm text-slate-300">A caring K12 learning community for curious, confident, and kind young people.</p>
           </div>
+
           <div className="space-y-3">
-            <h3 className="text-sm font-bold">Quick Links</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link href="/" className="text-sm text-muted-foreground hover:text-foreground">
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link href="/news" className="text-sm text-muted-foreground hover:text-foreground">
-                  News
-                </Link>
-              </li>
-              <li>
-                <Link href="/admissions" className="text-sm text-muted-foreground hover:text-foreground">
-                  Admissions
-                </Link>
-              </li>
-              <li>
-                <Link href="/about" className="text-sm text-muted-foreground hover:text-foreground">
-                  About Us
-                </Link>
-              </li>
+            <h3 className="text-sm font-bold uppercase tracking-[0.2em] text-slate-400">Explore</h3>
+            <ul className="space-y-2 text-sm text-slate-300">
+              <li><Link href="/" className="hover:text-white">Home</Link></li>
+              <li><Link href="/about" className="hover:text-white">Our School</Link></li>
+              <li><Link href="/news" className="hover:text-white">School Stories</Link></li>
+              <li><Link href="/admissions" className="hover:text-white">Admissions</Link></li>
             </ul>
           </div>
+
           <div className="space-y-3">
-            <h3 className="text-sm font-bold">Resources</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link href="/resources/academic-calendar" className="text-sm text-muted-foreground hover:text-foreground">
-                  Academic Calendar
-                </Link>
-              </li>
-              <li>
-                <Link href="/resources/library" className="text-sm text-muted-foreground hover:text-foreground">
-                  Library
-                </Link>
-              </li>
-              <li>
-                <Link href="/resources/student-portal" className="text-sm text-muted-foreground hover:text-foreground">
-                  Student Portal
-                </Link>
-              </li>
-              <li>
-                <Link href="/about" className="text-sm text-muted-foreground hover:text-foreground">
-                  Faculty Directory
-                </Link>
-              </li>
+            <h3 className="text-sm font-bold uppercase tracking-[0.2em] text-slate-400">Family Resources</h3>
+            <ul className="space-y-2 text-sm text-slate-300">
+              <li><Link href="/resources/academic-calendar" className="hover:text-white">School Calendar</Link></li>
+              <li><Link href="/resources/library" className="hover:text-white">Learning Commons</Link></li>
+              <li><Link href="/resources/student-portal" className="hover:text-white">Parent Portal</Link></li>
+              <li><Link href="/admissions/apply" className="hover:text-white">Book a Visit</Link></li>
             </ul>
           </div>
-          <div className="space-y-3">
-            <h3 className="text-sm font-bold">Contact</h3>
-            <address className="not-italic text-sm text-muted-foreground">
-              <p>12 Ala-Too Street, Building 3, Room 45</p>
-              <p>Ananyevo, Issyk-Kul Region 722101, Kyrgyzstan</p>
-              <p className="mt-2">Email: info@zeno.edu.kg</p>
-              <p>Phone: +1 (217) 858-1258</p>
-            </address>
+
+          <div className="space-y-3 text-sm text-slate-300">
+            <h3 className="text-sm font-bold uppercase tracking-[0.2em] text-slate-400">Contact</h3>
+            <p>88 Harmony Road, Education Park</p>
+            <p>Shenzhen, Guangdong 518000</p>
+            <p className="pt-2">Email: admissions@zenoschool.edu</p>
+            <p>Phone: +86 (755) 8601 2026</p>
           </div>
         </div>
-        <div className="mt-10 border-t pt-6">
-          <p className="text-center text-sm text-muted-foreground">
-            &copy; {new Date().getFullYear()} Zeno Academy. All rights reserved.
-          </p>
+
+        <div className="mt-10 border-t border-slate-800 pt-6 text-center text-sm text-slate-400">
+          © {new Date().getFullYear()} Zeno School. All rights reserved.
         </div>
       </div>
     </footer>

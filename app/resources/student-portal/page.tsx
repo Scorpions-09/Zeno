@@ -7,7 +7,6 @@ import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert'
 
-
 export default function StudentPortalPage() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
@@ -17,26 +16,25 @@ export default function StudentPortalPage() {
   const handleLogin = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault()
     setError(null)
-    setMessage(null)
-    // Simulate login failure
-    setError("Incorrect username or password")
+    setMessage('Demo portal only. Connect this form to your SIS or parent portal provider to enable real login.')
   }
 
   const handleForgotPassword = () => {
     setError(null)
-    setMessage("Contact administrator admin@zeno.edu.kg")
+    setMessage('Please contact portal support at portal@zenoschool.edu for account assistance.')
   }
 
   return (
-    <div className="container py-12 md:py-16 lg:py-24 flex items-center justify-center min-h-screen">
-      <Card className="w-full max-w-md">
+    <div className="container flex min-h-screen items-center justify-center py-12 md:py-16 lg:py-24">
+      <Card className="w-full max-w-md rounded-3xl shadow-none">
         <CardHeader className="text-center">
-          <CardTitle className="text-2xl font-bold">Student Portal Login</CardTitle>
+          <p className="text-sm font-semibold uppercase tracking-[0.25em] text-primary">Family access</p>
+          <CardTitle className="text-2xl font-bold">Parent Portal</CardTitle>
         </CardHeader>
         <CardContent>
           {error && (
             <Alert variant="destructive" className="mb-4">
-              <AlertTitle>Login Failed</AlertTitle>
+              <AlertTitle>Login failed</AlertTitle>
               <AlertDescription>{error}</AlertDescription>
             </Alert>
           )}
@@ -48,57 +46,31 @@ export default function StudentPortalPage() {
           <form onSubmit={handleLogin} className="space-y-6">
             <div className="space-y-2">
               <Label htmlFor="email">Email</Label>
-              <Input 
-                id="email" 
-                type="email" 
-                placeholder="you@example.com" 
-                required 
+              <Input
+                id="email"
+                type="email"
+                placeholder="parent@example.com"
+                required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                onInvalid={(e) => {
-                  const target = e.target as HTMLInputElement;
-                  if (target.validity.valueMissing) {
-                    target.setCustomValidity('Please fill out this field.');
-                  } else if (target.validity.typeMismatch) {
-                    target.setCustomValidity(`Please include an "@" in the email address. '${target.value}' is missing an "@".`);
-                  } else {
-                    target.setCustomValidity('');
-                  }
-                }}
-                onInput={(e) => {
-                  const target = e.target as HTMLInputElement;
-                  target.setCustomValidity('');
-                }}
               />
             </div>
             <div className="space-y-2">
               <Label htmlFor="password">Password</Label>
-              <Input 
-                id="password" 
-                type="password" 
-                placeholder="Enter your password" 
-                required 
+              <Input
+                id="password"
+                type="password"
+                placeholder="Enter your password"
+                required
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                onInvalid={(e) => {
-                  const target = e.target as HTMLInputElement;
-                  if (target.validity.valueMissing) {
-                    target.setCustomValidity('Please fill out this field.');
-                  } else {
-                    target.setCustomValidity(''); // Clear for other cases or if valid (e.g. length)
-                  }
-                }}
-                onInput={(e) => {
-                  const target = e.target as HTMLInputElement;
-                  target.setCustomValidity('');
-                }}
               />
             </div>
-            <Button type="submit" className="w-full">Login</Button>
+            <Button type="submit" className="w-full">Sign in</Button>
           </form>
           <div className="mt-4 text-center">
             <Button variant="link" onClick={handleForgotPassword} className="text-sm">
-              Forgot password?
+              Need help accessing your account?
             </Button>
           </div>
         </CardContent>

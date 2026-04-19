@@ -1,85 +1,63 @@
 export const metadata = {
-  title: "Library | Zeno Academy",
-  description: "Explore the resources and services offered by the Zeno Academy Library.",
+  title: "Learning Commons | Zeno School",
+  description: "Explore reading, research, and student learning resources at Zeno School.",
 }
 
 export default function LibraryPage() {
   return (
     <div className="container py-12 md:py-16 lg:py-24">
-      <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
-        <div className="space-y-2">
-          <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Zeno Academy Library</h1>
-          <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
-            Your gateway to knowledge, research, and learning resources.
+      <div className="mb-12 flex flex-col items-center justify-center space-y-4 text-center">
+        <div className="max-w-3xl space-y-3">
+          <p className="text-sm font-semibold uppercase tracking-[0.25em] text-primary">Resources</p>
+          <h1 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">Learning Commons</h1>
+          <p className="text-muted-foreground md:text-xl">
+            A flexible reading and research space that supports curiosity, independent study, guided inquiry, and joyful access to books.
           </p>
         </div>
       </div>
 
       <div className="grid gap-12">
         <section>
-          <h2 className="text-2xl font-bold mb-6">About Our Library</h2>
-          <div className="prose max-w-none">
-            <p>
-              The Zeno Academy Library is a vital center for learning, research, and intellectual exploration. We are committed to providing comprehensive resources, innovative services, and a welcoming environment to support the academic pursuits of our students, faculty, and staff.
-            </p>
-            <p>
-              Our extensive collection includes over 500,000 volumes, a vast array of digital resources including e-books, academic journals, and databases, as well as special collections of rare manuscripts and archives. 
-            </p>
-            <p>
-              The library offers a variety of study spaces, from quiet individual carrels to collaborative group study rooms, all equipped with modern technology and comfortable furnishings. Our knowledgeable librarians are always available to assist with research, information literacy, and accessing our diverse collections.
-            </p>
+          <h2 className="mb-6 text-2xl font-bold">What students can do here</h2>
+          <div className="grid gap-6 md:grid-cols-2">
+            <div className="rounded-3xl bg-slate-50 p-6 text-muted-foreground">
+              Browse leveled readers, bilingual texts, nonfiction collections, and classroom-linked reading lists selected for different age groups.
+            </div>
+            <div className="rounded-3xl bg-slate-50 p-6 text-muted-foreground">
+              Use supervised research stations, digital subscriptions, and project support resources for inquiry and presentation work.
+            </div>
+            <div className="rounded-3xl bg-slate-50 p-6 text-muted-foreground">
+              Join read-aloud sessions, book tastings, literacy events, and author-themed weeks that help build reading identity.
+            </div>
+            <div className="rounded-3xl bg-slate-50 p-6 text-muted-foreground">
+              Access calm study zones and small group tables for collaborative work, reflection, and guided intervention sessions.
+            </div>
           </div>
         </section>
 
         <section>
-          <h2 className="text-2xl font-bold mb-6">Library Services</h2>
-          <ul className="list-disc list-inside space-y-2 text-muted-foreground">
-            <li>Access to physical and digital collections</li>
-            <li>Research assistance and consultations</li>
-            <li>Information literacy workshops</li>
-            <li>Interlibrary loan services</li>
-            <li>Quiet and group study spaces</li>
-            <li>Computer workstations and printing facilities</li>
-            <li>Access to special collections and archives</li>
-          </ul>
-        </section>
-
-        <section>
-          <h2 className="text-2xl font-bold mb-6">Operating Hours</h2>
-          <div className="overflow-x-auto">
-            <table className="min-w-full divide-y divide-gray-200">
-              <thead className="bg-gray-50">
-                <tr>
-                  <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Day</th>
-                  <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Hours</th>
+          <h2 className="mb-6 text-2xl font-bold">Opening hours</h2>
+          <div className="overflow-x-auto rounded-3xl border bg-white">
+            <table className="min-w-full border-collapse">
+              <thead>
+                <tr className="border-b text-left text-sm text-muted-foreground">
+                  <th className="px-6 py-4 font-medium">Day</th>
+                  <th className="px-6 py-4 font-medium">Hours</th>
                 </tr>
               </thead>
-              <tbody className="bg-white divide-y divide-gray-200">
-                <tr>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Monday - Friday</td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">8:00 AM - 10:00 PM</td>
-                </tr>
-                <tr>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Saturday</td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">10:00 AM - 6:00 PM</td>
-                </tr>
-                <tr>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Sunday</td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">12:00 PM - 6:00 PM</td>
-                </tr>
-                <tr>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Holidays</td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Closed (or special hours, please check announcements)</td>
-                </tr>
+              <tbody>
+                <tr className="border-b"><td className="px-6 py-4 text-sm font-medium">Monday to Friday</td><td className="px-6 py-4 text-sm text-muted-foreground">8:00 AM to 5:00 PM</td></tr>
+                <tr className="border-b"><td className="px-6 py-4 text-sm font-medium">Saturday</td><td className="px-6 py-4 text-sm text-muted-foreground">Open for special events only</td></tr>
+                <tr><td className="px-6 py-4 text-sm font-medium">Sunday</td><td className="px-6 py-4 text-sm text-muted-foreground">Closed</td></tr>
               </tbody>
             </table>
           </div>
         </section>
 
         <section>
-          <h2 className="text-2xl font-bold mb-6">Contact Us</h2>
+          <h2 className="mb-3 text-2xl font-bold">Need help?</h2>
           <p className="text-muted-foreground">
-            For any inquiries, please contact the library staff at <a href="mailto:library@zeno.edu.kg" className="text-primary hover:underline">library@zeno.edu.kg</a> or call us at +1 (217) 555-0102.
+            Families and students can contact the Learning Commons team at <a href="mailto:library@zenoschool.edu" className="text-primary hover:underline">library@zenoschool.edu</a> for borrowing support, reading recommendations, or research help.
           </p>
         </section>
       </div>
